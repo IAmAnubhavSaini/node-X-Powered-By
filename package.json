@@ -1,0 +1,31 @@
+{
+  "name": "@f0c1s/x-powered-by",
+  "version": "1.0.0",
+  "description": "Manage X-Powered-By | This helps in removing or adding any random value to response header",
+  "main": "src/manage.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmAnubhavSaini/node-X-Powered-By.git"
+  },
+  "keywords": [
+    "x-powered-by",
+    "response-header"
+  ],
+  "author": "Anubhav <iamanubhavsaini@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IAmAnubhavSaini/node-X-Powered-By/issues"
+  },
+  "homepage": "https://github.com/IAmAnubhavSaini/node-X-Powered-By#readme",
+  "dependencies": {
+    "@f0c1s/color-yellow": "0.0.1",
+    "jasmine": "^3.6.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.6.3",
+    "@types/node": "^14.14.22"
+  }
+}
