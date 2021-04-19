@@ -1,18 +1,19 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function remove() {
-    return function (req, res, next) {
-        res.header('X-Powered-By', '')
-        res.removeHeader('X-Powered-By')
-        next()
-    }
+    return function (_, res, next) {
+        res.removeHeader('X-Powered-By');
+        res.removeHeader('x-powered-by');
+        next();
+    };
 }
-
 function manage(value) {
-    return function (req, res, next) {
-        res.header('X-Powered-By', value)
-        next()
-    }
+    return function (_, res, next) {
+        res.set('X-Powered-By', value);
+        next();
+    };
 }
-
 module.exports = {
-    remove, manage
-}
+    remove: remove, manage: manage
+};
+//# sourceMappingURL=manage.js.map

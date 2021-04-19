@@ -1,26 +1,25 @@
-// import {remove, manage} from './manage.js' // jasmine doesn't like it
-const {remove, manage} = require('./manage')
-
-describe('remove', () => {
-    it('returns a function with arity of 3', () => {
-        const actual = remove().length
-        const expected = 3
-        expect(actual).toEqual(expected)
-    })
-    it('returned function calls next param callback', () => {
-        let called = false
-        const callback = () => called = !called
-        expect(called).toBeFalse()
+"use strict";
+var _a = require('./manage'), remove = _a.remove, manage = _a.manage;
+describe('remove', function () {
+    it('returns a function with arity of 3', function () {
+        var actual = remove().length;
+        var expected = 3;
+        expect(actual).toEqual(expected);
+    });
+    it('returned function calls next param callback', function () {
+        var called = false;
+        var callback = function () { return called = !called; };
+        expect(called).toBeFalse();
         remove()({}, {
-            removeHeader() {
+            removeHeader: function () {
             },
-            header() {
+            header: function () {
             }
-        }, callback)
-        expect(called).toBeTrue()
-    })
-})
-
+        }, callback);
+        expect(called).toBeTrue();
+    });
+});
 module.exports = {
-    remove, manage
-}
+    remove: remove, manage: manage
+};
+//# sourceMappingURL=manage.spec.js.map
